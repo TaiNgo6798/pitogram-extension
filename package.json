@@ -2,18 +2,28 @@
   "devDependencies": {
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.5",
+    "@typescript-eslint/eslint-plugin": "^6.9.1",
+    "@typescript-eslint/parser": "^6.9.1",
+    "eslint": "~8.52",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jest": "~27.6",
+    "eslint-plugin-prettier": "^5.0.1",
+    "extension": "latest",
+    "husky": "^9.0.11",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "tailwindcss": "^3.4.1",
-    "typescript": "5.3.3",
-    "extension": "latest"
+    "typescript": "5.3.3"
   },
   "scripts": {
     "dev": "extension dev",
     "start": "extension start",
-    "build": "extension build"
+    "build": "extension build",
+    "prepare": "husky install",
+    "lint": "eslint --fix . --ext .ts --ext .mts"
   },
-  "dependencies": {},
   "name": "pitogram-extension",
   "private": true,
   "version": "0.0.0"
