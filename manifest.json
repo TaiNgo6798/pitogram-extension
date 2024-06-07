@@ -2,22 +2,29 @@
   "manifest_version": 3,
   "version": "1.0",
   "name": "pitogram-extension",
-  "description": "An extension template using React and TypeScript. This template includes a content script using Tailwind.css. To see it in action, visit https://extension.js.org.",
+  "description": "pitogram here",
   "background": {
-    "service_worker": "./background.ts"
+    "service_worker": "./src/background.ts"
   },
-  "content_scripts": [
-    {
-      "matches": [
-        "https://extension.js.org/*"
-      ],
-      "js": [
-        "./content/content.tsx"
-      ]
-    }
-  ],
   "icons": {
     "16": "public/icon/icon_16.png",
     "48": "public/icon/icon_48.png"
-  }
+  },
+  "permissions": [
+    "cookies",
+    "tabs",
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.instagram.com/",
+    "http://localhost/*",
+    "*://*.pitogram.io.vn/"
+  ],
+  "action": {
+    "default_popup": "src/popup/index.html",
+    "default_title": "Pitogram Helper"
+  },
+  "options_page": "src/settings-page/index.html"
 }
